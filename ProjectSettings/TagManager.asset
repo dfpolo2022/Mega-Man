@@ -7,6 +7,8 @@ TagManager:
   - Background
   - obstacle
   - player
+  - checkpoint
+  - instakill
   layers:
   - Default
   - TransparentFX
@@ -43,6 +45,21 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2864129333
+    locked: 0
+  - name: Warning
+    uniqueID: 3636257907
+    locked: 0
+  - name: Shade
+    uniqueID: 3055825065
+    locked: 0
+  - name: Boulders
+    uniqueID: 38777863
+    locked: 0
+  - name: Lava
+    uniqueID: 2743098129
+    locked: 0
+  - name: Tiles
+    uniqueID: 3068303579
     locked: 0
   - name: Default
     uniqueID: 0

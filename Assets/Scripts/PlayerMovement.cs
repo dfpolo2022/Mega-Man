@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private bool right = true;
     private BoxCollider2D boxCollider;
     private Animator animator;
+    private Vector3 respawnPoint;
 
     // Funcion start
     private void Start()
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        respawnPoint = transform.position;
     }
 
     // Funcion update
@@ -89,5 +91,28 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit2D raycastHit  = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, layerFloor);
         return raycastHit.collider != null;
+    }
+
+    // Funcion para respawnear personaje al colisionar con objetos insta-kill
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "instakill")
+        {
+            transform.position = respawnPoint;
+        }
+        else if (collision.tag == "checkpoint")
+        {
+            respawnPoint = transform.position;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "instakill")
+        {
+            transform.position = respawnPoint;
+        }
+
     }
 }
