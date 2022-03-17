@@ -24,6 +24,13 @@ public class TimerMili : MonoBehaviour
         {
             cont++;
         }
-        UItexto.text = cont.ToString();
+        if (cont > 9)
+        {
+            UItexto.text = cont.ToString();
+        }
+        else
+        {
+            UItexto.text = "0" + cont.ToString();
+        }
     }
 }
