@@ -9,6 +9,10 @@ En este repositorio se encuentra el proyecto del primer corte de **Fundamentos d
 **Video explicativo del proyecto:**
 https://drive.google.com/file/d/1UC-z3c4-x4G3KkMwj7AsfZ-PuB9pmlAZ/view?usp=sharing
 
+| DEMOSTRACIÓN DEL PROYECTO |
+|-|
+|<img src="demo.gif" width="1000" />|
+
 - **Reglas del Juego:**
   - Para comenzar el juego solo es necesario correr el escenario en Unity.
   - Para moverse se pueden utilizar las flechas del teclado del computador o, de la misma manera, las teclas AWSD.
